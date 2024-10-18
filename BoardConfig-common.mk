@@ -174,7 +174,6 @@ BOARD_AVB_INIT_BOOT_ROLLBACK_INDEX_LOCATION := 4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 11796480000
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 PRODUCT_FS_COMPRESSION := 1
 BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_MOUNT_SDCARD_RW := true
@@ -205,7 +204,7 @@ BOARD_SUPPORT_MFC_ENC_RGB := true
 BOARD_USE_BLOB_ALLOCATOR := false
 BOARD_SUPPORT_MFC_ENC_BT2020 := true
 BOARD_SUPPORT_FLEXIBLE_P010 := true
-
+BOARD_SUPPORT_MFC_VERSION := 1660
 ########################
 
 BOARD_SUPER_PARTITION_SIZE := 8531214336
@@ -241,7 +240,7 @@ $(call soong_config_set,aoc_audio_func,ext_hidl,true)
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 $(call soong_config_set,aoc_audio_func,dump_usecase_data,true)
 $(call soong_config_set,aoc_audio_func,hal_socket_control,true)
-$(call soong_config_set,aoc_audio_func,record_tunning_keys,true)
+$(call soong_config_set,aoc_audio_func,record_tuning_keys,true)
 endif
 
 ifneq (,$(filter aosp_%,$(TARGET_PRODUCT)))
